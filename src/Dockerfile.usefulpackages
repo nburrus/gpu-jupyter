@@ -28,6 +28,8 @@ RUN pip install --no-cache-dir jupyter_contrib_nbextensions \
  jupyter_nbextensions_configurator rise && \
   jupyter nbextension enable codefolding/main
 RUN jupyter labextension install @ijmbarr/jupyterlab_spellchecker
+# 
+RUN conda upgrade -y jedi
 
 RUN fix-permissions /home/$NB_USER
 
